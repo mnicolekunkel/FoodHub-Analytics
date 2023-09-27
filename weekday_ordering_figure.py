@@ -25,5 +25,9 @@ for i in range(len(label_positions)):
 for i, count in enumerate(category_counts):
     plt.text(i, count + 25, str(count), ha='center', va='center', fontsize=10)
 
+# a horizontal line at the average number of orders at any given day
+mean_value = df['day_of_the_week'].value_counts().mean()
+plt.axhline(mean_value, color='black', linestyle='--', label=f'Mean ({mean_value:.2f})')
+plt.text(1, mean_value + 25, "average number of orders over the week", ha='center', va='center', fontsize=9, color='black') # label the line
 
 plt.show()
