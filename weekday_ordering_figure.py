@@ -1,7 +1,7 @@
 plt.figure(figsize=(6, 6))
 
 category_counts = df['day_of_the_week'].value_counts()
-sns.barplot(x=category_counts.index, y=category_counts, color='#F07C02')
+sns.barplot(x=category_counts.index, y=category_counts, color='#F07C02', saturation=1)
 
 plt.title('Weekend Versus Weekday Ordering')
 plt.ylabel('Number of Orders')
