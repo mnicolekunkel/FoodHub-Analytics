@@ -1,5 +1,5 @@
 plt.figure(figsize=(6, 6))
-sns.boxplot(data=df[['food_preparation_time', 'delivery_time']], orient="v", color='#F07C02', width=0.5) # i like the smaller width from a purely aesthetic standpoint
+sns.boxplot(data=df[['food_preparation_time', 'delivery_time']], orient="v", color='#F07C02', saturation=1, width=0.5) # i like the smaller width from a purely aesthetic standpoint
 
 plt.title('The Ranges of Food Prep and Delivery Times')
 plt.ylim(0, 40)
