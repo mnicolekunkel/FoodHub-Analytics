@@ -1,3 +1,7 @@
+# we need to ensure rating is read as a quantitative variable
+df['rating'] = df['rating'].replace(['Not given'],np.nan) # turn not given to sometime quantitativedly compatible
+df['rating'] = df['rating'].astype(float) # make rating read as a numeric value
+
 df['total_time'] = df['delivery_time']+df['food_preparation_time'] # get the total amt of time it takes waiting from ordering until delivery
 
 # set the figure size
